@@ -82,12 +82,6 @@ int main(int argc, char **argv )
         usefullOffset[j+3]=temp4;
     }
 
-    //preparation of the image by filling them with 0
-    for (out1.GoToBegin(); !out1.IsAtEnd(); ++out1)
-    {
-        out1.Set(0);
-    }
-
     //erosion main algorythms
     for (it.GoToBegin(), out1.GoToBegin(); !it.IsAtEnd(); ++it, ++out1)
     {
@@ -132,26 +126,24 @@ int main(int argc, char **argv )
 
     FaceCalculatorType::FaceListType::iterator fit;
 
-
-    //preparation of the image by filling them with 0
-    for (out2.GoToBegin(); !out2.IsAtEnd();++out2)
-    {
-        out2.SetPixel(usefullOffset[0],0);
-    }
-
     fit=faceList.begin();
     it = NeighborhoodIteratorType( radius, reader->GetOutput(),*fit);
     out2 =NeighborhoodIteratorType( radius,reader->GetOutput(), *fit );
     //erosion main algorythms
     for (it.GoToBegin(), out2.GoToBegin(); !it.IsAtEnd(); ++it, ++out2)
     {
+
         if(it.GetPixel(usefullOffset[0])!=0)
         {
+            std::cout<<out2.GetIndex(usefullOffset[0])<<std::endl;
             for(int i=0;i<4*(R-1)+1;i++)
             {
-                std::cout<<usefullOffset[i]<<std::endl;
                 out2.SetPixel(usefullOffset[i],255);
             }
+        }
+        else
+        {
+             std::cout<<"ok"<<std::endl;
         }
     }
 
