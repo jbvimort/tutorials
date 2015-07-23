@@ -79,8 +79,8 @@ int main(int argc, char **argv )
     BinaryFilterType::Pointer binaryFilter = BinaryFilterType::New();
 
     binaryFilter->SetInput(reader->GetOutput());
-    binaryFilter->SetInsideValue(0);
-    binaryFilter->SetOutsideValue(255);
+    binaryFilter->SetInsideValue(100);
+    binaryFilter->SetOutsideValue(200);
     binaryFilter->SetLowerThreshold(100);
     //binaryFilter->SetLowerThresholdInput(100);
     binaryFilter->SetUpperThreshold(150);
