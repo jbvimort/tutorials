@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>789</width>
-    <height>355</height>
+    <height>316</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -113,7 +113,7 @@
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>190</y>
+      <y>220</y>
       <width>121</width>
       <height>32</height>
      </rect>
@@ -158,27 +158,17 @@
      <string>Output figure</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="output">
+   <widget class="QCheckBox" name="checkBox">
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>250</y>
-      <width>113</width>
-      <height>21</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="save">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>270</y>
-      <width>114</width>
-      <height>32</height>
+      <y>200</y>
+      <width>131</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>intersection line</string>
     </property>
    </widget>
   </widget>

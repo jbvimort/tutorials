@@ -18,10 +18,6 @@ QtCore/qlist.h
 QtCore/qshareddata.h
 -
 
-/Library/Frameworks/QtGui.framework/Headers/QApplication
-qapplication.h
-/Library/Frameworks/QtGui.framework/Headers/qapplication.h
-
 /Library/Frameworks/QtGui.framework/Headers/QMainWindow
 qmainwindow.h
 /Library/Frameworks/QtGui.framework/Headers/qmainwindow.h
@@ -29,28 +25,6 @@ qmainwindow.h
 /Library/Frameworks/QtGui.framework/Headers/QWidget
 qwidget.h
 /Library/Frameworks/QtGui.framework/Headers/qwidget.h
-
-/Library/Frameworks/QtGui.framework/Headers/qapplication.h
-QtCore/qcoreapplication.h
--
-QtGui/qwindowdefs.h
--
-QtCore/qpoint.h
--
-QtCore/qsize.h
--
-QtGui/qcursor.h
--
-QtGui/qdesktopwidget.h
--
-QtGui/qwidget.h
--
-QtGui/qpalette.h
--
-QtGui/qrgb.h
--
-QtGui/qtransportauth_qws.h
--
 
 /Library/Frameworks/QtGui.framework/Headers/qmainwindow.h
 QtGui/qwidget.h
@@ -918,16 +892,6 @@ vtkPropCollection.h
 vtkVolume.h
 /Users/jvimort/Applications/VTK/VTK-6.2.0/Rendering/Core/vtkVolume.h
 
-/Users/jvimort/Desktop/tutos/tutorials/Qt/build/moc_mainwindow.cxx
-../test/mainwindow.h
-/Users/jvimort/Desktop/tutos/tutorials/Qt/test/mainwindow.h
-
-/Users/jvimort/Desktop/tutos/tutorials/Qt/test/main.cpp
-mainwindow.h
-/Users/jvimort/Desktop/tutos/tutorials/Qt/test/mainwindow.h
-QApplication
--
-
 /Users/jvimort/Desktop/tutos/tutorials/Qt/test/mainwindow.cpp
 mainwindow.h
 /Users/jvimort/Desktop/tutos/tutorials/Qt/test/mainwindow.h
@@ -990,6 +954,8 @@ QtGui/QAction
 QtGui/QApplication
 -
 QtGui/QButtonGroup
+-
+QtGui/QCheckBox
 -
 QtGui/QHeaderView
 -

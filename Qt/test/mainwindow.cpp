@@ -118,11 +118,11 @@ void MainWindow::Run()
     {
         booleanOperation->SetOperationToDifference();
     }
-    if(ui->unio->isChecked())
+    else if(ui->unio->isChecked())
     {
         booleanOperation->SetOperationToUnion();
     }
-    if(ui->inter->isChecked())
+    else
     {
         booleanOperation->SetOperationToIntersection();
     }
@@ -135,6 +135,25 @@ void MainWindow::Run()
     vtkSmartPointer<vtkActor> booleanOperationActor = vtkSmartPointer<vtkActor>::New();
     booleanOperationActor->SetMapper( booleanOperationMapper );
 
+
+    vtkSmartPointer<vtkActor> intersectionActor = vtkSmartPointer<vtkActor>::New();
+
+    if(ui->checkBox->isChecked())
+    {
+        vtkSmartPointer<vtkIntersectionPolyDataFilter> intersectionPolyDataFilter = vtkSmartPointer<vtkIntersectionPolyDataFilter>::New();
+        intersectionPolyDataFilter->SetInputConnection( 0, reader1->GetOutputPort() );
+        intersectionPolyDataFilter->SetInputConnection( 1, reader2->GetOutputPort() );
+        intersectionPolyDataFilter->Update();
+
+        vtkSmartPointer<vtkPolyDataMapper> intersectionMapper = vtkSmartPointer<vtkPolyDataMapper>::New();
+        intersectionMapper->SetInputConnection( intersectionPolyDataFilter->GetOutputPort() );
+        intersectionMapper->ScalarVisibilityOff();
+
+        intersectionActor->SetMapper( intersectionMapper );
+    }
+    intersectionActor->GetProperty()->SetColor(1,0,0);
+
+
     QVTKWidget *inputWidget = new QVTKWidget(ui->outputDisplay);
     vtkSmartPointer<vtkRenderer> ren = vtkRenderer::New();
     vtkSmartPointer<vtkRenderWindow> renWin = vtkRenderWindow::New();
@@ -142,6 +161,7 @@ void MainWindow::Run()
     renWin->AddRenderer(ren);
 
     ren->AddActor(booleanOperationActor);
+    ren->AddActor(intersectionActor);
     ren->SetBackground(1.0, 1.0, 1.0);
 
     ren->ResetCamera();

@@ -13,6 +13,7 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
+#include <QtGui/QCheckBox>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
@@ -42,8 +43,7 @@ public:
     QWidget *outputDisplay;
     QLabel *label;
     QLabel *label_2;
-    QLineEdit *output;
-    QPushButton *save;
+    QCheckBox *checkBox;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -52,7 +52,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(789, 355);
+        MainWindow->resize(789, 316);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         load1 = new QPushButton(centralWidget);
@@ -81,7 +81,7 @@ public:
         diff->setGeometry(QRect(350, 170, 102, 20));
         aplication = new QPushButton(centralWidget);
         aplication->setObjectName(QString::fromUtf8("aplication"));
-        aplication->setGeometry(QRect(340, 190, 121, 32));
+        aplication->setGeometry(QRect(340, 220, 121, 32));
         outputDisplay = new QWidget(centralWidget);
         outputDisplay->setObjectName(QString::fromUtf8("outputDisplay"));
         outputDisplay->setGeometry(QRect(480, 10, 301, 251));
@@ -91,12 +91,9 @@ public:
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(580, 270, 91, 20));
-        output = new QLineEdit(centralWidget);
-        output->setObjectName(QString::fromUtf8("output"));
-        output->setGeometry(QRect(350, 250, 113, 21));
-        save = new QPushButton(centralWidget);
-        save->setObjectName(QString::fromUtf8("save"));
-        save->setGeometry(QRect(350, 270, 114, 32));
+        checkBox = new QCheckBox(centralWidget);
+        checkBox->setObjectName(QString::fromUtf8("checkBox"));
+        checkBox->setGeometry(QRect(350, 200, 131, 20));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -125,7 +122,7 @@ public:
         aplication->setText(QApplication::translate("MainWindow", "Filter aplication", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("MainWindow", "Input figures", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("MainWindow", "Output figure", 0, QApplication::UnicodeUTF8));
-        save->setText(QApplication::translate("MainWindow", "PushButton", 0, QApplication::UnicodeUTF8));
+        checkBox->setText(QApplication::translate("MainWindow", "intersection line", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
