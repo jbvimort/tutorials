@@ -1,1 +1,0 @@
-/Users/jvimort/Desktop/tutos/tutorials/Qt/build/CMakeFiles/GUI.dir
