@@ -14,6 +14,7 @@
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
 #include <QtGui/QHeaderView>
+#include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
 #include <QtGui/QMainWindow>
 #include <QtGui/QMenuBar>
@@ -38,6 +39,11 @@ public:
     QRadioButton *inter;
     QRadioButton *diff;
     QPushButton *aplication;
+    QWidget *outputDisplay;
+    QLabel *label;
+    QLabel *label_2;
+    QLineEdit *output;
+    QPushButton *save;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -46,7 +52,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(475, 331);
+        MainWindow->resize(789, 355);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         load1 = new QPushButton(centralWidget);
@@ -60,26 +66,41 @@ public:
         input1->setGeometry(QRect(350, 10, 113, 21));
         load2 = new QPushButton(centralWidget);
         load2->setObjectName(QString::fromUtf8("load2"));
-        load2->setGeometry(QRect(350, 90, 114, 32));
+        load2->setGeometry(QRect(350, 80, 114, 32));
         input2 = new QLineEdit(centralWidget);
         input2->setObjectName(QString::fromUtf8("input2"));
-        input2->setGeometry(QRect(350, 70, 113, 21));
+        input2->setGeometry(QRect(350, 60, 113, 21));
         unio = new QRadioButton(centralWidget);
         unio->setObjectName(QString::fromUtf8("unio"));
-        unio->setGeometry(QRect(350, 130, 102, 20));
+        unio->setGeometry(QRect(350, 110, 102, 20));
         inter = new QRadioButton(centralWidget);
         inter->setObjectName(QString::fromUtf8("inter"));
-        inter->setGeometry(QRect(350, 160, 102, 20));
+        inter->setGeometry(QRect(350, 140, 102, 20));
         diff = new QRadioButton(centralWidget);
         diff->setObjectName(QString::fromUtf8("diff"));
-        diff->setGeometry(QRect(350, 190, 102, 20));
+        diff->setGeometry(QRect(350, 170, 102, 20));
         aplication = new QPushButton(centralWidget);
         aplication->setObjectName(QString::fromUtf8("aplication"));
-        aplication->setGeometry(QRect(343, 220, 121, 32));
+        aplication->setGeometry(QRect(340, 190, 121, 32));
+        outputDisplay = new QWidget(centralWidget);
+        outputDisplay->setObjectName(QString::fromUtf8("outputDisplay"));
+        outputDisplay->setGeometry(QRect(480, 10, 301, 251));
+        label = new QLabel(centralWidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(110, 270, 81, 20));
+        label_2 = new QLabel(centralWidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(580, 270, 91, 20));
+        output = new QLineEdit(centralWidget);
+        output->setObjectName(QString::fromUtf8("output"));
+        output->setGeometry(QRect(350, 250, 113, 21));
+        save = new QPushButton(centralWidget);
+        save->setObjectName(QString::fromUtf8("save"));
+        save->setGeometry(QRect(350, 270, 114, 32));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 475, 22));
+        menuBar->setGeometry(QRect(0, 0, 789, 22));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -102,6 +123,9 @@ public:
         inter->setText(QApplication::translate("MainWindow", "intersection", 0, QApplication::UnicodeUTF8));
         diff->setText(QApplication::translate("MainWindow", "difference", 0, QApplication::UnicodeUTF8));
         aplication->setText(QApplication::translate("MainWindow", "Filter aplication", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("MainWindow", "Input figures", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("MainWindow", "Output figure", 0, QApplication::UnicodeUTF8));
+        save->setText(QApplication::translate("MainWindow", "PushButton", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

@@ -38,6 +38,7 @@ public:
     QRadioButton *inter;
     QRadioButton *diff;
     QPushButton *aplication;
+    QWidget *inputDisplay_2;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -46,7 +47,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(475, 331);
+        MainWindow->resize(790, 319);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         load1 = new QPushButton(centralWidget);
@@ -76,10 +77,13 @@ public:
         aplication = new QPushButton(centralWidget);
         aplication->setObjectName(QStringLiteral("aplication"));
         aplication->setGeometry(QRect(343, 220, 121, 32));
+        inputDisplay_2 = new QWidget(centralWidget);
+        inputDisplay_2->setObjectName(QStringLiteral("inputDisplay_2"));
+        inputDisplay_2->setGeometry(QRect(480, 10, 301, 251));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 475, 22));
+        menuBar->setGeometry(QRect(0, 0, 790, 22));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));

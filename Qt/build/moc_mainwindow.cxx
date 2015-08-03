@@ -39,7 +39,7 @@ static const uint qt_meta_data_MainWindow[] = {
 
 static const char qt_meta_stringdata_MainWindow[] = {
     "MainWindow\0\0SelectInputFigure1()\0"
-    "SelectInputFigure2()\0run()\0"
+    "SelectInputFigure2()\0Run()\0"
 };
 
 void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -50,7 +50,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->SelectInputFigure1(); break;
         case 1: _t->SelectInputFigure2(); break;
-        case 2: _t->run(); break;
+        case 2: _t->Run(); break;
         default: ;
         }
     }

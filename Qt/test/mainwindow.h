@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "QVTKWidget.h"
+#include "QFileInfo"
 
 #include "vtkGenericDataObjectReader.h"
 #include "vtkStructuredGrid.h"
@@ -42,7 +43,7 @@ public:
 public slots:
     void SelectInputFigure1();
     void SelectInputFigure2();
-    void run();
+    void Run();
 
 private:
     Ui::MainWindow *ui;
@@ -58,13 +59,6 @@ private:
     vtkSmartPointer<vtkGenericDataObjectReader> reader2 =vtkSmartPointer<vtkGenericDataObjectReader>::New();
     vtkSmartPointer<vtkPolyDataMapper> mapper2 = vtkSmartPointer<vtkPolyDataMapper>::New();
     vtkSmartPointer<vtkActor> actor2 = vtkSmartPointer<vtkActor>::New();
-
-    //inputdisplay
-    vtkSmartPointer<vtkRenderer> ren = vtkRenderer::New();
-    vtkSmartPointer<vtkRenderWindow> renWin = vtkRenderWindow::New();
-    vtkSmartPointer<vtkRenderWindowInteractor> renWinInt = vtkRenderWindowInteractor::New();
-
-
 
 };
 
