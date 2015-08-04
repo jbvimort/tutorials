@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+<category>Filtering.Arithmetic</category>
+<title>Erode Filter</title>
+<description>Erode Filter</description>
+
+<parameters>
+  <label>IO</label>
+  <description>Input/Output parameters</description>
+
+  <image>
+    <name>inputFileName</name>
+    <label>input image file name</label>
+    <channel>image</channel>
+    <index>0</index>
+    <description>input image file name</description>
+  </image>
+
+  <image>
+    <name>outputFileName1</name>
+    <label>output1 image file name</label>
+    <longflag>output1</longflag>
+    <channel>image</channel>
+    <description>output1 image file name</description>
+    <default>output1</default>
+  </image>
+
+  <image>
+    <name>outputFileName2</name>
+    <label>output2 image file name</label>
+    <longflag>output2</longflag>
+    <channel>image</channel>
+    <description>output2 image file name</description>
+    <default>output2</default>
+  </image>
+
+ <integer>
+    <name>rad</name>
+    <longflag>radius</longflag>
+    <flag>r</flag>
+    <label>radius</label>
+    <description>kernel's radius value</description>
+    <constraints>
+      <minimum>1</minimum>
+    </constraints>
+    <default>1</default>
+  </integer>
+
+</parameters>
+
+</executable>
+
