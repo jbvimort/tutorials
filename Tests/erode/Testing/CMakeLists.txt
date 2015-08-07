@@ -34,6 +34,14 @@ ExternalData_add_test(MY_DATA NAME ErodeFilterWrongInputFileName COMMAND $<TARGE
 )
 set_tests_properties( ErodeFilterWrongInputFileName PROPERTIES WILL_FAIL true )
 
+#Test checking that a wrong input will prevent the program from running
+ExternalData_add_test(MY_DATA NAME ErodeFilterWrongRadius COMMAND $<TARGET_FILE:erode>
+  ${Input}
+  -o ${standardOutput}
+  -r 0
+)
+set_tests_properties( ErodeFilterWrongRadius PROPERTIES WILL_FAIL true )
+
 # Tests checking that that the output image is what is expected
 ExternalData_add_test(MY_DATA NAME ErodeFilterRadiusValue2 COMMAND $<TARGET_FILE:ErodeFilterTest>
   --compare

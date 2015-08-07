@@ -16,6 +16,12 @@ int main(int argc, char **argv )
 
     ///reading of the input file
     /// --------------------------------
+    
+    if( radius < 1 )
+    {
+        std::cout << "Radius value must be non-zero positive integer." << std::endl ;
+        return EXIT_FAILURE ;
+    }
 
     //definition of the data type
     typedef unsigned char PixelType;
