@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+<category>Filtering.Arithmetic</category>
+<title>Erode Filter</title>
+<description>Erode Filter</description>
+
+<parameters>
+  <label>IO</label>
+  <description>Input/Output parameters</description>
+
+ <string>
+    <name>FileName</name>
+    <index>0</index>
+    <label>Name of the file</label>
+    <description>Name of the file</description>
+  </string>
+ 
+ <string>
+     <name>Message</name>
+     <index>1</index>
+     <label>Message to put in the file</label>
+     <description>Message to put in the file</description>
+ </string>
+
+
+</parameters>
+
+</executable>
+
